@@ -5,7 +5,7 @@ $${\color{red}This \space repository \space archives \space an \space rather \sp
 Provides weather information on the Roku Soundbride display when in stand-by mode. Tested with the M1001 model.
 Based on "rokuweather.pl" from _Michael Polymenakos_ (2007, mpoly@panix.com) and the "services" from _Adam Peller_ (peller@gnu.org)
 
-For Terms of Use of Yahoo weather service see at: http://developer.yahoo.com/weather/
+![Photo of Roku with waether display](https://github.com/GoHoHa/Tools4Roku/blob/main/images/myroku.jpg)
 
 ## Introduction and Features
 
@@ -21,6 +21,9 @@ This software allows you to:
 - use "sleep" function via remote control
 - use "alarm" function via remote control
 - shut down `mt-daapd server` from roku remotely
+
+![current weather](https://github.com/GoHoHa/Tools4Roku/blob/main/images/wetterheute.jpg)
+
 
 ## Installation
 
@@ -134,6 +137,8 @@ Currently the menu lets you choose from
 		 
 ### The Song Rating 
 
+![rating](https://github.com/GoHoHa/Tools4Roku/blob/main/images/rating.jpg)
+
 If music is playing, the songs can be rated with the remote.
 The rating is updated in the mt-daapd database (tested with svn-1696, sqlite2).
 The Rating is done from 0-100 (every 20 counts equals 1 star in iTunes).
@@ -159,6 +164,8 @@ Background: The current playing artist is read via RCP from your Soundbridge.
 With the name a list of similar artist is requested at audioscrobbler.com
 Based on  that list and the "similarity threshhold" your local collection of songs ist filtered with those artist names. The new generated playlist is played shuffled after the query is finished. 
 
+![Similar artists](https://github.com/GoHoHa/Tools4Roku/blob/main/images/similar.jpg)
+
 ## Icons
 
 The weahther icons are in `/pbm`
@@ -167,7 +174,7 @@ Be careful, the t4roku does not have much error handling!!
 Size of my icons is 32 x 32 pixel.
 Thanks _Marco Forschner_ for the 16 x 16 pixel icons.
 
-
+![Icons](https://github.com/GoHoHa/Tools4Roku/blob/main/images/IconOverview.png)
 
 ## To do (will probably never be done...)
 
@@ -237,6 +244,8 @@ Thanks _Marco Forschner_ for the 16 x 16 pixel icons.
  - first release, shows weather on Roku display when in stand-by
  
 ## Thanks
+
+For Terms of Use of Yahoo weather service see at: http://developer.yahoo.com/weather/
 
 Thanks to all who helped to improve this software.
 Mainly members of the Roku Forum: _Michael Polymenakos_, _Haggis_, _Marco Forschner_, _mic_hall_, _Steve Forster_
