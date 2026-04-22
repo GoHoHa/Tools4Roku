@@ -1,0 +1,162 @@
+################################################################################
+#
+# Tools4Roku localization file 
+#
+
+use strict;
+
+########################################################################
+# Edit here for your needs:
+
+# adjust IP adress of your roku here
+our $rokuIP = '192.168.xxx.yyy';
+
+# What type Display has your Soundbride?
+#   In case you do not know, have a close look or connect via telnet/TCP connection
+#   to port 4444) and call the "displaytype" shell command. 		
+#     0 = LCD Character OR String Character = 40 x 2                  
+#     1 = Small VFD Bitmap OR Small VFD Direct Bitmap = 280 x 16         
+#     2 = Small and Tall VFD Direct Bitmap = 280 x 32
+#     3 = Large VFD Bitmap = 512 x 32                
+our $displaytype = 2;
+ 
+# select in which mode the RokuTools shall start (e.g. after reboot)
+#  0 - current weather
+#  1 - todays and tomorrows forecast
+#  2 - time
+#  3 - compact view of all data
+our $modus = 0;
+
+# shall it alternate beteen views? (time in 10 x seconds, 0 = not alternating between mode 0,1,2)
+our $alternate = 6;
+
+# write your location here (see http://weather.yahoo.com/ for your location code)
+our $locationid = "JAXX0085";  # This is Tokyo for Example!
+
+# select your units ( c for metric system, f for non-metric units)
+our $unitsid = "f";
+
+# do you have digitemp data available (see www.digitemp.com)
+# Yes = 1 , No = 0
+our $digitemp = 0;
+
+# Wind direction decription, edit to match your language, start with north
+# this array can have 4, 8, 16 or 32 entries - the program will figure things out accordingly
+our @direction = ( 'N',
+                   'NE',
+                   'E',
+                   'SE',
+                   'S',
+                   'SW',
+                   'W',
+                   'NW');
+
+# Week day name decription, edit to match your language
+our %dayname =  ('Mon' => 'Mon',
+                 'Tue' => 'Tue',
+                 'Wed' => 'Wed',
+                 'Thu' => 'Thu',
+                 'Fri' => 'Fri',
+                 'Sat' => 'Sat',
+                 'Sun' => 'Sun'             
+               );
+               
+# Week month name decription, edit to match your needs
+our %monname =  ('Jan' => 'Jan',
+                 'Feb' => 'Feb',
+                 'Mar' => 'Mar',
+                 'Apr' => 'Apr',
+                 'May' => 'May',
+                 'Jun' => 'Jun',
+                 'Jul' => 'Jul',
+                 'Aug' => 'Aug',
+                 'Sep' => 'Sep',
+                 'Oct' => 'Oct',
+                 'Nov' => 'Nov',
+                 'Dec' => 'Dec',
+               );
+               
+
+# Codition code, edit to match your language
+our %condcode = (  0  => "Tornado",
+                   1  => "Tropical storm",
+                   2  => "Hurricane",
+                   3  => "Severe thunderstorms",
+                   4  => "Thunderstorms",
+                   5  => "Mixed rain and snow",
+                   6  => "Mixed rain and sleet",
+                   7  => "Mixed snow and sleet",
+                   8  => "Freezing drizzle",
+                   9  => "Drizzle",
+                  10  => "Freezing rain",
+                  11  => "Showers",
+                  12  => "Showers",
+                  13  => "Snow flurries",
+                  14  => "Light snow showers",
+                  15  => "Blowing snow",
+                  16  => "Snow",
+                  17  => "Hail",
+                  18  => "Sleet",
+                  19  => "Dust",
+                  20  => "Foggy",
+                  21  => "Haze",
+                  22  => "Smoky",
+                  23  => "Blustery",
+                  24  => "Windy",
+                  25  => "Cold",
+                  26  => "Cloudy",
+                  27  => "Mostly cloudy (night)",
+                  28  => "Mostly cloudy (day)",
+                  29  => "Partly cloudy (night)",
+                  30  => "Partly cloudy (day)",
+                  31  => "Clear (night)",
+                  32  => "Sunny",
+                  33  => "Fair (night)",
+                  34  => "Fair (day)",
+                  35  => "Mixed rain and hail",
+                  36  => "Hot",
+                  37  => "Isolated thunderstorms",
+                  38  => "Scattered thunderstorms",
+                  39  => "Scattered thunderstorms",
+                  40  => "Scattered showers",
+                  41  => "Heavy snow",
+                  42  => "Scattered snow showers",
+                  43  => "Heavy snow",
+                  44  => "Partly cloudy",
+                  45  => "Thundershowers",
+                  46  => "Snow showers",
+                  47  => "Isolated thundershowers",
+                3200  => "Not available");
+
+# Rating songs
+our $ilikeit		= "I like it";
+our $notmytaste		= "Its not my taste";
+our $nosongtorate	= "No song to rate";
+our $itsremotestream	= "Its a net-radio.";
+
+# Threshhold for similar artist selection
+our $threshhold 	= 50; # Must have similarity in percent
+our $similarartists1	= "Generate new plazlist of similar arists";
+our $similarartists2	= "(thanks to audioscrobbler.com)";
+our $lookforsimartist	= "Who is like ";
+our $searchfor		= "Look for ";
+
+# Other Strings used by t4Roku
+our $pleasewait 			= "Please wait...";
+our $getyahoodata		  = "Get weather data from: Yahoo! Weather ...";
+our $wind						  = "wind";
+our $menuweather 		  = "Show waether information";
+our $menuserverdown 	= "Shutdown server"; 
+our $menustealarm 		= "Set alarm"; 
+our $menusetsleep 		= "Set aleep mode"; 
+our $feelstring       = "feel";
+our $humistring       = "humid.";
+our $minstring				= "min.";
+our $maxstring				= "max.";
+our $outstring				= "out.";
+
+# stop edit here :) 
+####################################################################
+;
+1
+;

@@ -1,0 +1,3 @@
+cd /public/RokuWeather/t4roku
+perl test2.pl &
+cd /

@@ -1,0 +1,166 @@
+################################################################################
+#
+# Tools4Roku localization file 
+# Traduction par Guillaume Membré
+#
+
+use strict;
+
+########################################################################
+# Editez ici si besoin
+
+# adresse ip du roku
+our $rokuIP = '192.168.xxx.yyy';
+
+# Type d'affichage du Soundbridge
+#   En cas de doute, se connecter en telnet sur le roku sur le port 4444 et
+#   taper "displaytype" 
+#   * 0 = LCD Character OR String Character = 40 x 2                  
+#     1 = Small VFD Bitmap OR Small VFD Direct Bitmap = 280 x 16         
+#     2 = Small and Tall VFD Direct Bitmap = 280 x 32
+#   * 3 = Large VFD Bitmap = 512 x 32  
+#   * NOT YET READY !              
+our $displaytype = 2;
+ 
+# selectionner le mode dans lequel RokuTools doit demarrer apres un 
+# reboot
+#  0 - meteo actuelle
+#  1 - meteo d'aujourd'hui et de demain
+#  2 - vue compacte de toute les données
+#  3 - heure
+our $modus = 0;
+
+# alternance automatique des ecrans en multiple de 10 secondes, 
+#  0 = desactivé
+our $alternate = 6;
+
+# code de localisation cf http://weather.yahoo.com/
+our $locationid = "JAXX0085";
+
+# unité : c pour systeme metrique, f pour systeme non metrique
+our $unitsid = "c";
+
+# active l'utilisation d'une sonde digitemp (cf www.digitemp.com)
+# Oui = 1 , Non = 0
+our $digitemp = 0;
+
+# Direction du vent
+# Ce tableau peut etre etendu afin d'avoir 4, 8, 16 ou 32 entrée. Le programme 
+# se debrouillera
+our @direction = ( 'N',
+                   'NE',
+                   'E',
+                   'SE',
+                   'S',
+                   'SO',
+                   'O',
+                   'NO');
+
+# Jour de la semaine abrege
+our %dayname =  ('Mon' => 'Lun',
+                 'Tue' => 'Mar',
+                 'Wed' => 'Mer',
+                 'Thu' => 'Jeu',
+                 'Fri' => 'Ven',
+                 'Sat' => 'Sam',
+                 'Sun' => 'Dim'             
+               );
+               
+# Mois de l'année
+our %monname =  ('Jan' => 'Janvier',
+                 'Feb' => 'Février',
+                 'Mar' => 'Mars',
+                 'Apr' => 'Avril',
+                 'May' => 'Mai',
+                 'Jun' => 'Juin',
+                 'Jul' => 'Juillet',
+                 'Aug' => 'Aout',
+                 'Sep' => 'Septembre',
+                 'Oct' => 'Octobre',
+                 'Nov' => 'Novembre',
+                 'Dec' => 'Décembre',
+               );
+               
+# correspondance code => libellé
+my %condcode = ( 0  => "Tornade",
+        1  => "Tempête tropical",
+        2  => "Ouragan",
+        3  => "Orages violents",
+        4  => "Orages",
+        5  => "Pluie neige",
+        6  => "Pluie grêle",
+        7  => "Neige grêle",
+        8  => "Bruine verglaçant",
+        9  => "Bruine",
+        10  => "Pluie verglaçant",
+        11  => "Averses",
+        12  => "Averses",
+        13  => "Neige",
+        14  => "De légères tombés de neige",
+        15  => "Poudreuse",
+        16  => "Neige",
+        17  => "Grêle",
+        18  => "Grêle",
+        19  => "Brumeux",
+        20  => "Brumeux",
+        21  => "Brumeux",
+        22  => "Brouillard",
+        23  => "Très venteux",
+        24  => "Venteux",
+        25  => "Froid",
+        26  => "Nuageux",
+        27  => "Très nuageux",
+        28  => "Très nuageux",
+        29  => "Nuit claire",
+        30  => "Ensoleillé",
+        31  => "Nuit claire",
+        32  => "Ensoleillé",
+        33  => "Nuit mitigé",
+        34  => "Mitigé",
+        35  => "Mixtes pluie et la grêle",
+        36  => "Chaud",
+        37  => "Orages isolés",
+        38  => "Orages dispersés",
+        39  => "Orages dispersés",
+        40  => "Averses éparses",
+        41  => "Tempête de neige",
+        42  => "Neige",
+        43  => "Tempête de neige",
+        44  => "Ensoleillé",
+        45  => "Averses orageuses",
+        46  => "Averses de neige",
+        47  => "Orages isolés",
+        3200  => "Non disponible");
+
+# Rating songs
+our $ilikeit		= "C'est ma chanson préférée";
+our $notmytaste		= "Question de goût...";
+our $nosongtorate	= "No song to rate";
+our $itsremotestream	= "Its a net-radio.";
+
+# Threshhold for similar artist selection
+our $threshhold 	= 50; # Must have similarity in percent
+our $similarartists1	= "Generate new plazlist of similar arists";
+our $similarartists2	= "(thanks to audioscrobbler.com)";
+our $lookforsimartist	= "Who is like ";
+our $searchfor		= "Look for ";
+
+# Autres messages utilisé par t4Roku
+our $pleasewait 	= "Chargement en cours...";
+our $getyahoodata	= "Récuperation des donnédes de Yahoo! Weather ...";
+our $wind		= "vent";
+our $menuweather	= "Afficher la météo";
+our $menuserverdown 	= "Eteindre le serveur"; 
+our $menustealarm	= "Activer l'alarme"; 
+our $menusetsleep	= "Extinction"; 
+our $feelstring		= "ressenti";
+our $humistring		= "humid.";
+our $minstring		= "min.";
+our $maxstring		= "max.";
+our $outstring		= "out.";
+
+# fin de l'édition :)
+####################################################################
+;
+1
+;
